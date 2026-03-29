@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-notion-text antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Notion-style markdown content */
+.prose h1 { @apply text-[2rem] font-bold mb-4 mt-10 text-notion-text leading-tight; }
+.prose h2 { @apply text-[1.5rem] font-semibold mb-3 mt-8 text-notion-text leading-tight; }
+.prose h3 { @apply text-[1.25rem] font-semibold mb-2 mt-6 text-notion-text; }
+.prose p { @apply mb-1 leading-[1.7] text-notion-text; }
+.prose ul { @apply pl-[1.625rem] mb-1 list-disc; }
+.prose ol { @apply pl-[1.625rem] mb-1 list-decimal; }
+.prose li { @apply mb-0.5 leading-[1.7]; }
+.prose li::marker { @apply text-notion-text-secondary; }
+.prose code { @apply bg-notion-bg-hover text-[#eb5757] rounded px-1 py-0.5 text-[0.85em] font-mono; }
+.prose pre { @apply bg-notion-bg-gray border border-notion-border rounded-md p-4 mb-4 overflow-x-auto text-sm; }
+.prose pre code { @apply bg-transparent text-notion-text p-0; }
+.prose blockquote { @apply border-l-[3px] border-notion-text pl-4 text-notion-text my-2; }
+.prose table { @apply w-full border-collapse mb-4; }
+.prose th { @apply border border-notion-border bg-notion-bg-gray px-3 py-2 text-left text-sm font-medium text-notion-text; }
+.prose td { @apply border border-notion-border px-3 py-2 text-sm; }
+.prose a { @apply text-notion-text underline decoration-notion-text-secondary/40 underline-offset-2 hover:decoration-notion-text; }
+.prose strong { @apply font-semibold text-notion-text; }
+.prose hr { @apply border-notion-border my-6; }
