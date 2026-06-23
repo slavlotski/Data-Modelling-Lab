@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pg_normalization
+    environment:
+      POSTGRES_USER: speedrun
+      POSTGRES_PASSWORD: speedrun
+      POSTGRES_DB: speedrun
+    ports:
+      - "5432:5432"
